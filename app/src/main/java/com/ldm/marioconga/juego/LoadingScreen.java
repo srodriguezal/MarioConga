@@ -12,7 +12,7 @@ public class LoadingScreen extends Pantalla {
     @Override
     public void update(float deltaTime) {
         Graficos g = juego.getGraphics();
-        Assets.fondo = g.newPixmap("fondo.png", Graficos.PixmapFormat.RGB565);
+        Assets.fondo = g.newPixmap("cesped.png", Graficos.PixmapFormat.RGB565);
         Assets.logo = g.newPixmap("logo.png", Graficos.PixmapFormat.ARGB4444);
         Assets.menuprincipal = g.newPixmap("menuprincipal.png", Graficos.PixmapFormat.ARGB4444);
         Assets.botones = g.newPixmap("botones.png", Graficos.PixmapFormat.ARGB4444);
@@ -24,10 +24,10 @@ public class LoadingScreen extends Pantalla {
         Assets.menupausa = g.newPixmap("menupausa.png", Graficos.PixmapFormat.ARGB4444);
         Assets.finjuego = g.newPixmap("finjuego.png", Graficos.PixmapFormat.ARGB4444);
         Assets.barcoarriba = g.newPixmap("barcoarriba.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.barcoizquierda = g.newPixmap("barcoizquierda.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.barcoizquierda = g.newPixmap("yoshi_izquierda.png", Graficos.PixmapFormat.ARGB4444);
         Assets.barcoabajo = g.newPixmap("barcoabajo.png", Graficos.PixmapFormat.ARGB4444);
         Assets.barcoderecha = g.newPixmap("barcoderecha.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.tripulacion = g.newPixmap("tripulacion.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.tripulacion = g.newPixmap("bebe_mario.png", Graficos.PixmapFormat.ARGB4444);
         Assets.botin1 = g.newPixmap("botin1.png", Graficos.PixmapFormat.ARGB4444);
         Assets.botin2 = g.newPixmap("botin2.png", Graficos.PixmapFormat.ARGB4444);
         Assets.botin3 = g.newPixmap("botin3.png", Graficos.PixmapFormat.ARGB4444);

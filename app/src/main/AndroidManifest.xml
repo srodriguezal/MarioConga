@@ -15,7 +15,7 @@
 
         android:icon="@drawable/icon" android:debuggable="false" android:label="JollyRoger">
 
-        <activity android:name="com.ldm.marioconga.juego.JuegoPiratas">
+        <activity android:name="com.ldm.marioconga.juego.MarioConga">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
