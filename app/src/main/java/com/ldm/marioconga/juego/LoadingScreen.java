@@ -23,11 +23,11 @@ public class LoadingScreen extends Pantalla {
         Assets.preparado = g.newPixmap("preparado.png", Graficos.PixmapFormat.ARGB4444);
         Assets.menupausa = g.newPixmap("menupausa.png", Graficos.PixmapFormat.ARGB4444);
         Assets.finjuego = g.newPixmap("finjuego.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.personaje_arriba = g.newPixmap("yoshi_arriba.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.personaje_izquierda = g.newPixmap("yoshi_izquierda.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.personaje_abajo = g.newPixmap("yoshi_abajo.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.personaje_derecha = g.newPixmap("yoshi_derecha.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.seguidores = g.newPixmap("huevo.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.personaje_arriba = g.newPixmap("mario_arriba.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.personaje_izquierda = g.newPixmap("mario_izquierda.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.personaje_abajo = g.newPixmap("mario_abajo.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.personaje_derecha = g.newPixmap("mario_derecha.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.seguidores = g.newPixmap("bebe_mario.png", Graficos.PixmapFormat.ARGB4444);
         Assets.premio1 = g.newPixmap("seta1.png", Graficos.PixmapFormat.ARGB4444);
         Assets.premio2 = g.newPixmap("seta2.png", Graficos.PixmapFormat.ARGB4444);
         Assets.premio3 = g.newPixmap("seta3.png", Graficos.PixmapFormat.ARGB4444);
