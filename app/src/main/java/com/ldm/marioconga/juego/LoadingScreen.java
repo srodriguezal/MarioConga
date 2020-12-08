@@ -23,10 +23,10 @@ public class LoadingScreen extends Pantalla {
         Assets.preparado = g.newPixmap("preparado.png", Graficos.PixmapFormat.ARGB4444);
         Assets.menupausa = g.newPixmap("menupausa.png", Graficos.PixmapFormat.ARGB4444);
         Assets.finjuego = g.newPixmap("finjuego.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.barcoarriba = g.newPixmap("barcoarriba.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.barcoarriba = g.newPixmap("yoshi_arriba.png", Graficos.PixmapFormat.ARGB4444);
         Assets.barcoizquierda = g.newPixmap("yoshi_izquierda.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.barcoabajo = g.newPixmap("barcoabajo.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.barcoderecha = g.newPixmap("barcoderecha.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.barcoabajo = g.newPixmap("yoshi_abajo.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.barcoderecha = g.newPixmap("yoshi_derecha.png", Graficos.PixmapFormat.ARGB4444);
         Assets.tripulacion = g.newPixmap("bebe_mario.png", Graficos.PixmapFormat.ARGB4444);
         Assets.botin1 = g.newPixmap("botin1.png", Graficos.PixmapFormat.ARGB4444);
         Assets.botin2 = g.newPixmap("botin2.png", Graficos.PixmapFormat.ARGB4444);
