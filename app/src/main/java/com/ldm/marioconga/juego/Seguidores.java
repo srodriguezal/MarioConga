@@ -1,9 +1,9 @@
 package com.ldm.marioconga.juego;
 
-public class Tripulacion {
+public class Seguidores {
     public int x, y;
 
-    public Tripulacion(int x, int y) {
+    public Seguidores(int x, int y) {
         this.x = x;
         this.y = y;
     }

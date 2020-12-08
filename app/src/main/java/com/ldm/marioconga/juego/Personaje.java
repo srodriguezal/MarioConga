@@ -3,20 +3,20 @@ package com.ldm.marioconga.juego;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JollyRoger {
+public class Personaje {
     public static final int ARRIBA = 0;
     public static final int IZQUIERDA= 1;
     public static final int ABAJO = 2;
     public static final int DERECHA = 3;
 
-    public List<Tripulacion> partes = new ArrayList<Tripulacion>();
+    public List<Seguidores> partes = new ArrayList<Seguidores>();
     public int direccion;
 
-    public JollyRoger() {
+    public Personaje() {
         direccion = ARRIBA;
-        partes.add(new Tripulacion(5, 6));
-        partes.add(new Tripulacion(5, 7));
-        partes.add(new Tripulacion(5, 8));
+        partes.add(new Seguidores(5, 6));
+        partes.add(new Seguidores(5, 7));
+        partes.add(new Seguidores(5, 8));
     }
 
     public void girarIzquierda() {
@@ -32,17 +32,17 @@ public class JollyRoger {
     }
 
     public void abordaje() {
-        Tripulacion end = partes.get(partes.size()-1);
-        partes.add(new Tripulacion(end.x, end.y));
+        Seguidores end = partes.get(partes.size()-1);
+        partes.add(new Seguidores(end.x, end.y));
     }
 
     public void avance() {
-        Tripulacion barco = partes.get(0);
+        Seguidores barco = partes.get(0);
 
         int len = partes.size() - 1;
         for(int i = len; i > 0; i--) {
-            Tripulacion antes = partes.get(i-1);
-            Tripulacion parte = partes.get(i);
+            Seguidores antes = partes.get(i-1);
+            Seguidores parte = partes.get(i);
             parte.x = antes.x;
             parte.y = antes.y;
         }
@@ -68,9 +68,9 @@ public class JollyRoger {
 
     public boolean comprobarChoque() {
         int len = partes.size();
-        Tripulacion barco = partes.get(0);
+        Seguidores barco = partes.get(0);
         for(int i = 1; i < len; i++) {
-            Tripulacion parte = partes.get(i);
+            Seguidores parte = partes.get(i);
             if(parte.x == barco.x && parte.y == barco.y)
                 return true;
         }

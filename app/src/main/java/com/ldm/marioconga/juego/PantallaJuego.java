@@ -146,39 +146,39 @@ public class PantallaJuego extends Pantalla {
 
     private void drawWorld(Mundo mundo) {
         Graficos g = juego.getGraphics();
-        JollyRoger jollyroger = mundo.jollyroger;
-        Tripulacion head = jollyroger.partes.get(0);
-        Botin botin = mundo.botin;
+        Personaje jollyroger = mundo.jollyroger;
+        Seguidores head = jollyroger.partes.get(0);
+        Premio premio = mundo.premio;
 
 
         Pixmap stainPixmap = null;
-        if(botin.tipo== Botin.TIPO_1)
-            stainPixmap = Assets.botin1;
-        if(botin.tipo == Botin.TIPO_2)
-            stainPixmap = Assets.botin2;
-        if(botin.tipo == Botin.TIPO_3)
-            stainPixmap = Assets.botin3;
-        int x = botin.x * 32;
-        int y = botin.y * 32;
+        if(premio.tipo== Premio.TIPO_1)
+            stainPixmap = Assets.premio1;
+        if(premio.tipo == Premio.TIPO_2)
+            stainPixmap = Assets.premio2;
+        if(premio.tipo == Premio.TIPO_3)
+            stainPixmap = Assets.premio3;
+        int x = premio.x * 32;
+        int y = premio.y * 32;
         g.drawPixmap(stainPixmap, x, y);
 
         int len = jollyroger.partes.size();
         for(int i = 1; i < len; i++) {
-            Tripulacion part = jollyroger.partes.get(i);
+            Seguidores part = jollyroger.partes.get(i);
             x = part.x * 32;
             y = part.y * 32;
-            g.drawPixmap(Assets.tripulacion, x, y);
+            g.drawPixmap(Assets.seguidores, x, y);
         }
 
         Pixmap headPixmap = null;
-        if(jollyroger.direccion == JollyRoger.ARRIBA)
-            headPixmap = Assets.barcoarriba;
-        if(jollyroger.direccion == JollyRoger.IZQUIERDA)
-            headPixmap = Assets.barcoizquierda;
-        if(jollyroger.direccion == JollyRoger.ABAJO)
-            headPixmap = Assets.barcoabajo;
-        if(jollyroger.direccion == JollyRoger.DERECHA)
-            headPixmap = Assets.barcoderecha;
+        if(jollyroger.direccion == Personaje.ARRIBA)
+            headPixmap = Assets.personaje_arriba;
+        if(jollyroger.direccion == Personaje.IZQUIERDA)
+            headPixmap = Assets.personaje_izquierda;
+        if(jollyroger.direccion == Personaje.ABAJO)
+            headPixmap = Assets.personaje_abajo;
+        if(jollyroger.direccion == Personaje.DERECHA)
+            headPixmap = Assets.personaje_derecha;
         x = head.x * 32 + 16;
         y = head.y * 32 + 16;
         g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
