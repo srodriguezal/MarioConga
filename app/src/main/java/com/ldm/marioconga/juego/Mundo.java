@@ -5,7 +5,9 @@ import java.util.Random;
 public class Mundo {
     static final int MUNDO_ANCHO = 10;
     static final int MUNDO_ALTO = 13;
-    static final int INCREMENTO_PUNTUACION = 10;
+    static final int PUNTUACION_MINIMA = 5;
+    static final int PUNTUACION_MEDIA = 10;
+    static final int PUNTUACION_MAXIMA = 15;
     static final float TICK_INICIAL = 0.5f;
     static final float TICK_DECREMENTO = 0.05f;
 
@@ -71,7 +73,14 @@ public class Mundo {
 
             Seguidores head = personaje.partes.get(0);
             if (head.x == premio.x && head.y == premio.y) {
-                puntuacion += INCREMENTO_PUNTUACION;
+                if (premio.getTipo() == 0){
+                    puntuacion += PUNTUACION_MINIMA;
+                }else if (premio.getTipo() == 1){
+                    puntuacion += PUNTUACION_MEDIA;
+                }else {
+                    puntuacion += PUNTUACION_MAXIMA;
+                }
+
                 personaje.conga();
                 if (personaje.partes.size() == MUNDO_ANCHO * MUNDO_ALTO) {
                     finalJuego = true;
