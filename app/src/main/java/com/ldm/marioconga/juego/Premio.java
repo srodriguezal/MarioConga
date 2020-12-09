@@ -12,4 +12,8 @@ public class Premio {
         this.y = y;
         this.tipo = tipo;
     }
+
+    public int getTipo() {
+        return tipo;
+    }
 }
