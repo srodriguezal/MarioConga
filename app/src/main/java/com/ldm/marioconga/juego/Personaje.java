@@ -31,13 +31,13 @@ public class Personaje {
             direccion = DERECHA;
     }
 
-    public void abordaje() {
+    public void conga() {
         Seguidores end = partes.get(partes.size()-1);
         partes.add(new Seguidores(end.x, end.y));
     }
 
     public void avance() {
-        Seguidores barco = partes.get(0);
+        Seguidores cabeza = partes.get(0);
 
         int len = partes.size() - 1;
         for(int i = len; i > 0; i--) {
@@ -48,30 +48,30 @@ public class Personaje {
         }
 
         if(direccion == ARRIBA)
-            barco.y -= 1;
+            cabeza.y -= 1;
         if(direccion == IZQUIERDA)
-            barco.x -= 1;
+            cabeza.x -= 1;
         if(direccion == ABAJO)
-            barco.y += 1;
+            cabeza.y += 1;
         if(direccion == DERECHA)
-            barco.x += 1;
+            cabeza.x += 1;
 
-        if(barco.x < 0)
-            barco.x = 9;
-        if(barco.x > 9)
-            barco.x = 0;
-        if(barco.y < 0)
-            barco.y = 12;
-        if(barco.y > 12)
-            barco.y = 0;
+        if(cabeza.x < 0)
+            cabeza.x = 9;
+        if(cabeza.x > 9)
+            cabeza.x = 0;
+        if(cabeza.y < 0)
+            cabeza.y = 12;
+        if(cabeza.y > 12)
+            cabeza.y = 0;
     }
 
     public boolean comprobarChoque() {
         int len = partes.size();
-        Seguidores barco = partes.get(0);
+        Seguidores cabeza = partes.get(0);
         for(int i = 1; i < len; i++) {
             Seguidores parte = partes.get(i);
-            if(parte.x == barco.x && parte.y == barco.y)
+            if(parte.x == cabeza.x && parte.y == cabeza.y)
                 return true;
         }
         return false;

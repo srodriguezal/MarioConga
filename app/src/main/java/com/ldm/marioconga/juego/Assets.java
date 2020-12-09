@@ -24,8 +24,10 @@ public class Assets {
     public static Pixmap premio2;
     public static Pixmap premio3;
 
+    public static Sonido start;
     public static Sonido pulsar;
-    public static Sonido ataque;
+    public static Sonido sonido_seta;
     public static Sonido derrota;
+    public static Sonido pausa;
 
 }

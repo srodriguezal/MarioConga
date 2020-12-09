@@ -9,7 +9,7 @@ public class Mundo {
     static final float TICK_INICIAL = 0.5f;
     static final float TICK_DECREMENTO = 0.05f;
 
-    public Personaje jollyroger;
+    public Personaje personaje;
     public Premio premio;
     public boolean finalJuego = false;
     public int puntuacion = 0;
@@ -20,38 +20,38 @@ public class Mundo {
     static float tick = TICK_INICIAL;
 
     public Mundo() {
-        jollyroger = new Personaje();
-        colocarBotin();
+        personaje = new Personaje();
+        colocarPremio();
     }
 
-    private void colocarBotin() {
+    private void colocarPremio() {
         for (int x = 0; x < MUNDO_ANCHO; x++) {
             for (int y = 0; y < MUNDO_ALTO; y++) {
                 campos[x][y] = false;
             }
         }
 
-        int len = jollyroger.partes.size();
+        int len = personaje.partes.size();
         for (int i = 0; i < len; i++) {
-            Seguidores parte = jollyroger.partes.get(i);
+            Seguidores parte = personaje.partes.get(i);
             campos[parte.x][parte.y] = true;
         }
 
-        int botinX = random.nextInt(MUNDO_ANCHO);
-        int botinY = random.nextInt(MUNDO_ALTO);
+        int premioX = random.nextInt(MUNDO_ANCHO);
+        int premioY = random.nextInt(MUNDO_ALTO);
         while (true) {
-            if (campos[botinX][botinY] == false)
+            if (campos[premioX][premioY] == false)
                 break;
-            botinX += 1;
-            if (botinX >= MUNDO_ANCHO) {
-                botinX = 0;
-                botinY += 1;
-                if (botinY >= MUNDO_ALTO) {
-                    botinY = 0;
+            premioX += 1;
+            if (premioX >= MUNDO_ANCHO) {
+                premioX = 0;
+                premioY += 1;
+                if (premioY >= MUNDO_ALTO) {
+                    premioY = 0;
                 }
             }
         }
-        premio = new Premio(botinX, botinY, random.nextInt(3));
+        premio = new Premio(premioX, premioY, random.nextInt(3));
     }
 
     public void update(float deltaTime) {
@@ -63,21 +63,21 @@ public class Mundo {
 
         while (tiempoTick > tick) {
             tiempoTick -= tick;
-            jollyroger.avance();
-            if (jollyroger.comprobarChoque()) {
+            personaje.avance();
+            if (personaje.comprobarChoque()) {
                 finalJuego = true;
                 return;
             }
 
-            Seguidores head = jollyroger.partes.get(0);
+            Seguidores head = personaje.partes.get(0);
             if (head.x == premio.x && head.y == premio.y) {
                 puntuacion += INCREMENTO_PUNTUACION;
-                jollyroger.abordaje();
-                if (jollyroger.partes.size() == MUNDO_ANCHO * MUNDO_ALTO) {
+                personaje.conga();
+                if (personaje.partes.size() == MUNDO_ANCHO * MUNDO_ALTO) {
                     finalJuego = true;
                     return;
                 } else {
-                    colocarBotin();
+                    colocarPremio();
                 }
 
                 if (puntuacion % 100 == 0 && tick - TICK_DECREMENTO > 0) {

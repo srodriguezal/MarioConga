@@ -56,17 +56,17 @@ public class PantallaJuego extends Pantalla {
             if(event.type == Input.TouchEvent.TOUCH_UP) {
                 if(event.x < 64 && event.y < 64) {
                     if(Configuraciones.sonidoHabilitado)
-                        Assets.pulsar.play(1);
+                        Assets.pausa.play(1);
                     estado = EstadoJuego.Pausado;
                     return;
                 }
             }
             if(event.type == Input.TouchEvent.TOUCH_DOWN) {
                 if(event.x < 64 && event.y > 416) {
-                    mundo.jollyroger.girarIzquierda();
+                    mundo.personaje.girarIzquierda();
                 }
                 if(event.x > 256 && event.y > 416) {
-                    mundo.jollyroger.girarDerecha();
+                    mundo.personaje.girarDerecha();
                 }
             }
         }
@@ -81,7 +81,7 @@ public class PantallaJuego extends Pantalla {
             antiguaPuntuacion = mundo.puntuacion;
             puntuacion = "" + antiguaPuntuacion;
             if(Configuraciones.sonidoHabilitado)
-                Assets.ataque.play(1);
+                Assets.sonido_seta.play(1);
         }
     }
 
@@ -135,8 +135,10 @@ public class PantallaJuego extends Pantalla {
             drawReadyUI();
         if(estado == EstadoJuego.Ejecutandose)
             drawRunningUI();
-        if(estado == EstadoJuego.Pausado)
+        if(estado == EstadoJuego.Pausado){
             drawPausedUI();
+        }
+
         if(estado == EstadoJuego.FinJuego)
             drawGameOverUI();
 
@@ -146,7 +148,7 @@ public class PantallaJuego extends Pantalla {
 
     private void drawWorld(Mundo mundo) {
         Graficos g = juego.getGraphics();
-        Personaje jollyroger = mundo.jollyroger;
+        Personaje jollyroger = mundo.personaje;
         Seguidores head = jollyroger.partes.get(0);
         Premio premio = mundo.premio;
 
@@ -202,7 +204,6 @@ public class PantallaJuego extends Pantalla {
 
     private void drawPausedUI() {
         Graficos g = juego.getGraphics();
-
         g.drawPixmap(Assets.menupausa, 80, 100);
         g.drawLine(0, 416, 480, 416, Color.BLACK);
     }

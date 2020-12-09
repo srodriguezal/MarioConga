@@ -5,7 +5,6 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-
 import com.ldm.marioconga.FileIO;
 
 public class Configuraciones {
@@ -16,7 +15,7 @@ public class Configuraciones {
         BufferedReader in = null;
         try {
             in = new BufferedReader(new InputStreamReader(
-                    files.leerArchivo(".piratas")));
+                    files.leerArchivo(".marioconga")));
             sonidoHabilitado = Boolean.parseBoolean(in.readLine());
             for (int i = 0; i < 5; i++) {
                 maxPuntuaciones[i] = Integer.parseInt(in.readLine());
@@ -38,7 +37,7 @@ public class Configuraciones {
         BufferedWriter out = null;
         try {
             out = new BufferedWriter(new OutputStreamWriter(
-                    files.escribirArchivo(".piratas")));
+                    files.escribirArchivo(".marioconga")));
             out.write(Boolean.toString(sonidoHabilitado));
             out.write("\n");
             for (int i = 0; i < 5; i++) {

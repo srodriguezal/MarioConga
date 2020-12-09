@@ -29,7 +29,7 @@ public class MainMenuScreen extends Pantalla {
                 if(inBounds(event, 64, 220, 192, 42) ) {
                     juego.setScreen(new PantallaJuego(juego));
                     if(Configuraciones.sonidoHabilitado)
-                    {Assets.pulsar.play(1);
+                    {Assets.start.play(1);
                     }
 
                     return;

@@ -3,7 +3,6 @@
     package="com.ldm.marioconga.juego">
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-sdk  android:targetSdkVersion="17"/>
 
     <application
         android:allowBackup="true"
@@ -12,8 +11,6 @@
         android:roundIcon="@drawable/icono"
         android:supportsRtl="true"
         android:theme="@style/Theme.MarioConga">
-
-        android:icon="@drawable/icon" android:debuggable="false" android:label="JollyRoger">
 
         <activity android:name="com.ldm.marioconga.juego.MarioConga">
             <intent-filter>

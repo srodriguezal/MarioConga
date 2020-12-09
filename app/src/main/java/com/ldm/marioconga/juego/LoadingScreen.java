@@ -31,8 +31,11 @@ public class LoadingScreen extends Pantalla {
         Assets.premio1 = g.newPixmap("seta1.png", Graficos.PixmapFormat.ARGB4444);
         Assets.premio2 = g.newPixmap("seta2.png", Graficos.PixmapFormat.ARGB4444);
         Assets.premio3 = g.newPixmap("seta3.png", Graficos.PixmapFormat.ARGB4444);
+
         Assets.pulsar = juego.getAudio().nuevoSonido("pulsar.ogg");
-        Assets.ataque = juego.getAudio().nuevoSonido("ataque.ogg");
+        Assets.start = juego.getAudio().nuevoSonido("start.ogg");
+        Assets.pausa = juego.getAudio().nuevoSonido("pausa.ogg");
+        Assets.sonido_seta = juego.getAudio().nuevoSonido("sonido_seta.ogg");
         Assets.derrota = juego.getAudio().nuevoSonido("derrota.ogg");
 
 
