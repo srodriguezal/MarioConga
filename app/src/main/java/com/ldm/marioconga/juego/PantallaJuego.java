@@ -151,6 +151,7 @@ public class PantallaJuego extends Pantalla {
         Personaje jollyroger = mundo.personaje;
         Seguidores head = jollyroger.partes.get(0);
         Premio premio = mundo.premio;
+        Enemigo enemigo=mundo.enemigo;
 
 
         Pixmap stainPixmap = null;
@@ -171,6 +172,17 @@ public class PantallaJuego extends Pantalla {
             y = part.y * 32;
             g.drawPixmap(Assets.seguidores, x, y);
         }
+
+        Pixmap enmigoPixmap=null;
+        if(enemigo.tipo==Enemigo.TIPO_1)
+            enmigoPixmap=Assets.goomba;
+        if (enemigo.tipo==Enemigo.TIPO_2)
+            enmigoPixmap=Assets.bootler;
+        if(enemigo.tipo==Enemigo.TIPO_3)
+            enmigoPixmap=Assets.boo;
+        int xE= enemigo.x *32;
+        int yE=enemigo.y*32;
+        g.drawPixmap(enmigoPixmap,xE,yE);
 
         Pixmap headPixmap = null;
         if(jollyroger.direccion == Personaje.ARRIBA)

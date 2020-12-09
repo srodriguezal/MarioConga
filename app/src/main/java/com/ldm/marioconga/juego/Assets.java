@@ -23,6 +23,9 @@ public class Assets {
     public static Pixmap premio1;
     public static Pixmap premio2;
     public static Pixmap premio3;
+    public static Pixmap goomba;
+    public static Pixmap boo;
+    public static Pixmap bootler;
 
     public static Sonido start;
     public static Sonido pulsar;
