@@ -50,13 +50,13 @@ public class LoadingScreen extends Pantalla {
         Assets.mario_izquierda = g.newPixmap("mario_izquierda.png", Graficos.PixmapFormat.ARGB4444);
         Assets.mario_abajo = g.newPixmap("mario_abajo.png", Graficos.PixmapFormat.ARGB4444);
         Assets.mario_derecha = g.newPixmap("mario_derecha.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.mario_bebe = g.newPixmap("bebe_mario.png", Graficos.PixmapFormat.ARGB4444);
-
-        Assets.mario_arriba = g.newPixmap("mario_arriba.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.mario_izquierda = g.newPixmap("mario_izquierda.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.mario_abajo = g.newPixmap("mario_abajo.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.mario_derecha = g.newPixmap("mario_derecha.png", Graficos.PixmapFormat.ARGB4444);
         Assets.mario_bebe = g.newPixmap("bebe_mario.png", Graficos.PixmapFormat.ARGB4444);*/
+
+        Assets.yoshi_arriba = g.newPixmap("yoshi_arriba.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.yoshi_izquierda = g.newPixmap("yoshi_izquierda.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.yoshi_abajo = g.newPixmap("yoshi_abajo.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.yoshi_derecha = g.newPixmap("yoshi_derecha.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.huevos = g.newPixmap("huevo.png", Graficos.PixmapFormat.ARGB4444);
 
         Assets.premio1 = g.newPixmap("seta1.png", Graficos.PixmapFormat.ARGB4444);
         Assets.premio2 = g.newPixmap("seta2.png", Graficos.PixmapFormat.ARGB4444);

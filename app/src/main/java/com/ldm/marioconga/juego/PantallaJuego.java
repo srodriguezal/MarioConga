@@ -166,14 +166,6 @@ public class PantallaJuego extends Pantalla {
         g.drawPixmap(stainPixmap, x, y);
 
 
-        int len = personaje.partes.size();
-        for(int i = 1; i < len; i++) {
-            Seguidores part = personaje.partes.get(i);
-            x = part.x * 32;
-            y = part.y * 32;
-            g.drawPixmap(Assets.mario_bebe, x, y);
-        }
-
         Pixmap enmigoPixmap=null;
         if(enemigo.tipo==Enemigo.TIPO_1)
             enmigoPixmap=Assets.goomba;
@@ -187,6 +179,13 @@ public class PantallaJuego extends Pantalla {
 
         Pixmap headPixmap = null;
        if(personaje.tipo== Personaje.TIPO_1) {
+           int len = personaje.partes.size();
+           for(int i = 1; i < len; i++) {
+               Seguidores part = personaje.partes.get(i);
+               x = part.x * 32;
+               y = part.y * 32;
+               g.drawPixmap(Assets.mario_bebe, x, y);
+           }
            if (personaje.direccion == Personaje.ARRIBA)
                headPixmap = Assets.mario_arriba;
            if (personaje.direccion == Personaje.IZQUIERDA)
@@ -195,7 +194,14 @@ public class PantallaJuego extends Pantalla {
                headPixmap = Assets.mario_abajo;
            if (personaje.direccion == Personaje.DERECHA)
                headPixmap = Assets.mario_derecha;
-       } else if(personaje.tipo== Personaje.TIPO_4) {
+       }  else if(personaje.tipo== Personaje.TIPO_4) {
+           int len = personaje.partes.size();
+           for(int i = 1; i < len; i++) {
+               Seguidores part = personaje.partes.get(i);
+               x = part.x * 32;
+               y = part.y * 32;
+               g.drawPixmap(Assets.destello, x, y);
+           }
            if (personaje.direccion == Personaje.ARRIBA)
                headPixmap = Assets.estela_arriba;
            if (personaje.direccion == Personaje.IZQUIERDA)
@@ -204,6 +210,22 @@ public class PantallaJuego extends Pantalla {
                headPixmap = Assets.estela_abajo;
            if (personaje.direccion == Personaje.DERECHA)
                headPixmap = Assets.estela_derecha;
+       } else if(personaje.tipo== Personaje.TIPO_6) {
+           int len = personaje.partes.size();
+           for(int i = 1; i < len; i++) {
+               Seguidores part = personaje.partes.get(i);
+               x = part.x * 32;
+               y = part.y * 32;
+               g.drawPixmap(Assets.huevos, x, y);
+           }
+           if (personaje.direccion == Personaje.ARRIBA)
+               headPixmap = Assets.yoshi_arriba;
+           if (personaje.direccion == Personaje.IZQUIERDA)
+               headPixmap = Assets.yoshi_izquierda;
+           if (personaje.direccion == Personaje.ABAJO)
+               headPixmap = Assets.yoshi_abajo;
+           if (personaje.direccion == Personaje.DERECHA)
+               headPixmap = Assets.yoshi_derecha;
        }
         x = head.x * 32 + 16;
         y = head.y * 32 + 16;

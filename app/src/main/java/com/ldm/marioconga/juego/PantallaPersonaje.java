@@ -83,24 +83,6 @@ public class PantallaPersonaje extends Pantalla {
             return false;
     }
 
-   /* public void elegirPersonaje(float deltaTime){
-        List<Input.TouchEvent> touchEvents = juego.getInput().getTouchEvents();
-        juego.getInput().getKeyEvents();
-
-        int len = touchEvents.size();
-        for (int i = 0; i < len; i++) {
-            Input.TouchEvent event = touchEvents.get(i);
-            if (event.type == Input.TouchEvent.TOUCH_UP) {
-                if(inBounds(event, 0, g.getHeight() - 64, 64, 64)) {
-                    if(Configuraciones.sonidoHabilitado)
-                        Assets.pulsar.play(1);
-                    juego.setScreen(new PantallaJuego(juego));
-
-                }
-
-            }
-        }
-    }*/
     @Override
     public void present(float deltaTime) {
         Graficos g = juego.getGraphics();
