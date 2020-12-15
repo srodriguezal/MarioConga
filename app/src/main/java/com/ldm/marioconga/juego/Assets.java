@@ -16,11 +16,36 @@ public class Assets {
     public static Pixmap preparado;
     public static Pixmap menupausa;
     public static Pixmap finjuego;
-    public static Pixmap personaje_arriba;
-    public static Pixmap personaje_izquierda;
-    public static Pixmap personaje_abajo;
-    public static Pixmap personaje_derecha;
-    public static Pixmap seguidores;
+    public static Pixmap mario_arriba;
+    public static Pixmap mario_izquierda;
+    public static Pixmap mario_abajo;
+    public static Pixmap mario_derecha;
+    /*public static Pixmap luigi_arriba;
+    public static Pixmap luigi_izquierda;
+    public static Pixmap luigi_abajo;
+    public static Pixmap luigi_derecha;*/
+    /*public static Pixmap peach_arriba;
+    public static Pixmap peach_izquierda;
+    public static Pixmap peach_abajo;
+    public static Pixmap peach_derecha;*/
+    public static Pixmap estela_arriba;
+    public static Pixmap estela_izquierda;
+    public static Pixmap estela_abajo;
+    public static Pixmap estela_derecha;
+    /*public static Pixmap bowser_arriba;
+    public static Pixmap bowser_izquierda;
+    public static Pixmap bowser_abajo;
+    public static Pixmap bowser_derecha;*/
+    public static Pixmap yoshi_arriba;
+    public static Pixmap yoshi_izquierda;
+    public static Pixmap yoshi_abajo;
+    public static Pixmap yoshi_derecha;
+    public static Pixmap mario_bebe;
+    //public static Pixmap luigi_bebe;
+    //public static Pixmap peach_bebe;
+    public static Pixmap destello;
+    //public static Pixmap bowser_jr;
+    public static Pixmap huevos;
     public static Pixmap premio1;
     public static Pixmap premio2;
     public static Pixmap premio3;

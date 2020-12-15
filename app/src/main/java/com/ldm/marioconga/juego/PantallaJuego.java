@@ -23,9 +23,9 @@ public class PantallaJuego extends Pantalla {
     int antiguaPuntuacion = 0;
     String puntuacion = "0";
 
-    public PantallaJuego(Juego juego) {
+    public PantallaJuego(Juego juego, int tipoPersonaje) {
         super(juego);
-        mundo = new Mundo();
+        mundo = new Mundo(tipoPersonaje);
     }
 
     @Override
@@ -148,8 +148,8 @@ public class PantallaJuego extends Pantalla {
 
     private void drawWorld(Mundo mundo) {
         Graficos g = juego.getGraphics();
-        Personaje jollyroger = mundo.personaje;
-        Seguidores head = jollyroger.partes.get(0);
+        Personaje personaje = mundo.personaje;
+        Seguidores head = personaje.partes.get(0);
         Premio premio = mundo.premio;
         Enemigo enemigo=mundo.enemigo;
 
@@ -165,12 +165,13 @@ public class PantallaJuego extends Pantalla {
         int y = premio.y * 32;
         g.drawPixmap(stainPixmap, x, y);
 
-        int len = jollyroger.partes.size();
+
+        int len = personaje.partes.size();
         for(int i = 1; i < len; i++) {
-            Seguidores part = jollyroger.partes.get(i);
+            Seguidores part = personaje.partes.get(i);
             x = part.x * 32;
             y = part.y * 32;
-            g.drawPixmap(Assets.seguidores, x, y);
+            g.drawPixmap(Assets.mario_bebe, x, y);
         }
 
         Pixmap enmigoPixmap=null;
@@ -185,14 +186,25 @@ public class PantallaJuego extends Pantalla {
         g.drawPixmap(enmigoPixmap,xE,yE);
 
         Pixmap headPixmap = null;
-        if(jollyroger.direccion == Personaje.ARRIBA)
-            headPixmap = Assets.personaje_arriba;
-        if(jollyroger.direccion == Personaje.IZQUIERDA)
-            headPixmap = Assets.personaje_izquierda;
-        if(jollyroger.direccion == Personaje.ABAJO)
-            headPixmap = Assets.personaje_abajo;
-        if(jollyroger.direccion == Personaje.DERECHA)
-            headPixmap = Assets.personaje_derecha;
+       if(personaje.tipo== Personaje.TIPO_1) {
+           if (personaje.direccion == Personaje.ARRIBA)
+               headPixmap = Assets.mario_arriba;
+           if (personaje.direccion == Personaje.IZQUIERDA)
+               headPixmap = Assets.mario_izquierda;
+           if (personaje.direccion == Personaje.ABAJO)
+               headPixmap = Assets.mario_abajo;
+           if (personaje.direccion == Personaje.DERECHA)
+               headPixmap = Assets.mario_derecha;
+       } else if(personaje.tipo== Personaje.TIPO_4) {
+           if (personaje.direccion == Personaje.ARRIBA)
+               headPixmap = Assets.estela_arriba;
+           if (personaje.direccion == Personaje.IZQUIERDA)
+               headPixmap = Assets.estela_izquierda;
+           if (personaje.direccion == Personaje.ABAJO)
+               headPixmap = Assets.estela_abajo;
+           if (personaje.direccion == Personaje.DERECHA)
+               headPixmap = Assets.estela_derecha;
+       }
         x = head.x * 32 + 16;
         y = head.y * 32 + 16;
         g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);

@@ -14,23 +14,6 @@ public class PantallaPersonaje extends Pantalla {
 
     @Override
     public void update(float deltaTime) {
-        /*List<Input.TouchEvent> touchEvents = juego.getInput().getTouchEvents();
-        juego.getInput().getKeyEvents();
-
-        int len = touchEvents.size();
-        for (int i = 0; i < len; i++) {
-            Input.TouchEvent event = touchEvents.get(i);
-            if (event.type == Input.TouchEvent.TOUCH_UP) {
-                if (event.x < 64 && event.y > 416) {
-                    if(Configuraciones.sonidoHabilitado)
-                        Assets.pulsar.play(1);
-                    juego.setScreen(new MainMenuScreen(juego));
-                    return;
-                }
-
-            }
-        }*/
-
         Graficos g = juego.getGraphics();
         List<Input.TouchEvent> touchEvents = juego.getInput().getTouchEvents();
         juego.getInput().getKeyEvents();
@@ -51,21 +34,41 @@ public class PantallaPersonaje extends Pantalla {
                     if(Configuraciones.sonidoHabilitado)
                         Assets.pulsar.play(1);
                 }
-                //seleccionar el personaje
-                if(inBounds(event, 64, 220, 192, 42) ) {
-                    if(inBounds(event, 0, g.getHeight() - 64, 64, 64)) {
+                // Seleccionar el personaje
+
+                if(inBounds(event, 30, 115, 70, 80) ){ // Mario
+                    if(Configuraciones.sonidoHabilitado)
+                        Assets.start.play(1);
+                    juego.setScreen(new PantallaJuego(juego, 1));
+
+                } else if(inBounds(event, 205, 115, 70, 80) ){ // Luigi
+                    if(Configuraciones.sonidoHabilitado)
+                        Assets.start.play(1);
+                    juego.setScreen(new PantallaJuego(juego, 2));
+
+                } else if(inBounds(event, 30, 220, 70, 70) ){ // Peach
                         if(Configuraciones.sonidoHabilitado)
-                            Assets.pulsar.play(1);
-                        juego.setScreen(new PantallaJuego(juego));
+                            Assets.start.play(1);
+                        juego.setScreen(new PantallaJuego(juego, 3));
 
-                    }
-                   // juego.setScreen(new PantallaJuego(juego));
-                    /*if(Configuraciones.sonidoHabilitado)
-                    {Assets.start.play(1);
-                    }*/
+                } else if(inBounds(event, 205, 220, 70, 70) ){ // Estela
+                        if(Configuraciones.sonidoHabilitado)
+                            Assets.start.play(1);
+                        juego.setScreen(new PantallaJuego(juego, 4));
 
+                } else if(inBounds(event, 30, 325, 70, 60) ){ // Bowser
+                    if(Configuraciones.sonidoHabilitado)
+                        Assets.start.play(1);
+                    juego.setScreen(new PantallaJuego(juego, 5));
+
+                } else if(inBounds(event, 205, 320, 70, 55) ){ // Yoshi
+                if(Configuraciones.sonidoHabilitado)
+                    Assets.start.play(1);
+                juego.setScreen(new PantallaJuego(juego, 6));
+
+            }
                     return;
-                }
+
 
             }
 

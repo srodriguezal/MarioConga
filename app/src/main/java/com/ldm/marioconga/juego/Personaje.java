@@ -8,15 +8,23 @@ public class Personaje {
     public static final int IZQUIERDA= 1;
     public static final int ABAJO = 2;
     public static final int DERECHA = 3;
+    public static final int TIPO_1 = 1;
+    public static final int TIPO_2 = 2;
+    public static final int TIPO_3 = 3;
+    public static final int TIPO_4 = 4;
+    public static final int TIPO_5 = 5;
+    public static final int TIPO_6 = 6;
+    public int tipo;
 
     public List<Seguidores> partes = new ArrayList<Seguidores>();
     public int direccion;
 
-    public Personaje() {
+    public Personaje(int tipo) {
         direccion = ARRIBA;
         partes.add(new Seguidores(5, 6));
         partes.add(new Seguidores(5, 7));
         partes.add(new Seguidores(5, 8));
+        this.tipo = tipo;
     }
 
     public void girarIzquierda() {

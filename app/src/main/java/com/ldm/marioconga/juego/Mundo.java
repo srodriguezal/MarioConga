@@ -24,8 +24,8 @@ public class Mundo {
     float tiempoTick = 0;
     static float tick = TICK_INICIAL;
 
-    public Mundo() {
-        personaje = new Personaje();
+    public Mundo(int tipoPersonaje) {
+        personaje = new Personaje(tipoPersonaje);
         colocarPremio();
         colocarEnemigo();
     }
