@@ -7,6 +7,7 @@ public class Assets {
     public static Pixmap fondo;
     public static Pixmap logo;
     public static Pixmap menuprincipal;
+    public static Pixmap pantalla_personajes;
     public static Pixmap botones;
     public static Pixmap ayuda1;
     public static Pixmap ayuda2;

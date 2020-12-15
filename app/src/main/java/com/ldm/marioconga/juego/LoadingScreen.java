@@ -15,6 +15,7 @@ public class LoadingScreen extends Pantalla {
         Assets.fondo = g.newPixmap("cesped.png", Graficos.PixmapFormat.RGB565);
         Assets.logo = g.newPixmap("logo.png", Graficos.PixmapFormat.ARGB4444);
         Assets.menuprincipal = g.newPixmap("menuprincipal.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.pantalla_personajes = g.newPixmap("pantalla_personajes.png", Graficos.PixmapFormat.ARGB4444);
         Assets.botones = g.newPixmap("botones.png", Graficos.PixmapFormat.ARGB4444);
         Assets.ayuda1 = g.newPixmap("ayuda1.png", Graficos.PixmapFormat.ARGB4444);
         Assets.ayuda2 = g.newPixmap("ayuda2.png", Graficos.PixmapFormat.ARGB4444);
