@@ -43,6 +43,7 @@ public class Mundo {
             campos[parte.x][parte.y] = true;
         }
 
+
         int premioX = random.nextInt(MUNDO_ANCHO);
         int premioY = random.nextInt(MUNDO_ALTO);
         while (true) {
@@ -62,11 +63,11 @@ public class Mundo {
 
     private void colocarEnemigo() {
         System.out.println("entro");
-      /*  for (int x = 0; x < MUNDO_ANCHO; x++) {
+       for (int x = 0; x < MUNDO_ANCHO; x++) {
             for (int y = 0; y < MUNDO_ALTO; y++) {
                 campos[x][y] = false;
             }
-        }*/
+        }
 
 
         int len = personaje.partes.size();
@@ -133,13 +134,11 @@ public class Mundo {
                         * Aqui se añade un enemigo si la cola es multiplo de 5
                         * se pretente implementar que el bucle for llame colocar enemigo varias veces para colocar un numero aleatorio de enemigos.
                         * */
-                        numeroEnemigos=random.nextInt(3)+1;
+
                         System.out.println(numeroEnemigos);
-                        //int i;
-                        //for(int i=0; i == numeroEnemigos-1; i++){
-                            //System.out.println(i);
-                            colocarEnemigo();
-                        //}
+
+                        colocarEnemigo();
+
                     }
                 }
 
