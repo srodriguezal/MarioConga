@@ -91,6 +91,8 @@ public class Assets {
     public static Sonido estela;
     public static Sonido bowser;
     public static Sonido yoshi;
+
     public static Musica partida;
+    public static Musica intro;
 
 }

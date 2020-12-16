@@ -103,9 +103,11 @@ public class LoadingScreen extends Pantalla {
         Assets.yoshi = juego.getAudio().nuevoSonido("yoshi.ogg");
 
         Assets.partida = juego.getAudio().nuevaMusica("partida.ogg");
-
+        Assets.intro = juego.getAudio().nuevaMusica("overture.ogg");
 
         Configuraciones.cargar(juego.getFileIO());
+
+
         juego.setScreen(new MainMenuScreen(juego));
     }
 

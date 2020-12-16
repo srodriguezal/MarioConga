@@ -17,33 +17,47 @@ public class MainMenuScreen extends Pantalla {
         List<Input.TouchEvent> touchEvents = juego.getInput().getTouchEvents();
         juego.getInput().getKeyEvents();
 
+
         int len = touchEvents.size();
+
+        if(!Configuraciones.sonidoHabilitado) {
+            Assets.intro.stop();
+
+        }
         for(int i = 0; i < len; i++) {
             Input.TouchEvent event = touchEvents.get(i);
             if(event.type == Input.TouchEvent.TOUCH_UP) {
                 if(inBounds(event, 0, g.getHeight() - 64, 64, 64)) {
                     Configuraciones.sonidoHabilitado = !Configuraciones.sonidoHabilitado;
-                    if(Configuraciones.sonidoHabilitado)
+                    if(Configuraciones.sonidoHabilitado) {
                         Assets.pulsar.play(1);
+
+                    }
                 }
+
                 if(inBounds(event, 64, 220, 192, 42) ) {
                     juego.setScreen(new PantallaPersonaje(juego));
-                    if(Configuraciones.sonidoHabilitado)
-                    {Assets.pulsar.play(1);
+                    if(Configuraciones.sonidoHabilitado) {
+                        Assets.intro.stop();
+                        Assets.pulsar.play(1);
                     }
 
                     return;
                 }
                 if(inBounds(event, 64, 220 + 42, 192, 42) ) {
                     juego.setScreen(new PantallaMaximasPuntuaciones(juego));
-                    if(Configuraciones.sonidoHabilitado)
+                    if(Configuraciones.sonidoHabilitado){
+                        Assets.intro.stop();
                         Assets.start.play(1);
+                    }
                     return;
                 }
                 if(inBounds(event, 64, 220 + 84, 192, 42) ) {
                     juego.setScreen(new PantallaAyuda(juego));
-                    if(Configuraciones.sonidoHabilitado)
-                        Assets.pulsar.play(1);
+                    if(Configuraciones.sonidoHabilitado) {
+                        Assets.intro.stop();
+                        Assets.start.play(1);
+                    }
                     return;
                 }
             }
@@ -69,6 +83,10 @@ public class MainMenuScreen extends Pantalla {
             g.drawPixmap(Assets.botones, 0, 416, 0, 0, 64, 64);
         else
             g.drawPixmap(Assets.botones, 0, 416, 64, 0, 64, 64);
+        if(Configuraciones.sonidoHabilitado) {
+            Assets.intro.play();
+            Assets.intro.setLooping(true);
+        }
     }
 
     @Override
