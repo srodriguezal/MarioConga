@@ -1,5 +1,6 @@
 package com.ldm.marioconga.juego;
 
+import com.ldm.marioconga.Musica;
 import com.ldm.marioconga.Pixmap;
 import com.ldm.marioconga.Sonido;
 
@@ -76,5 +77,12 @@ public class Assets {
     public static Sonido sonido_seta;
     public static Sonido derrota;
     public static Sonido pausa;
+    public static Sonido mario;
+    public static Sonido luigi;
+    public static Sonido peach;
+    public static Sonido estela;
+    public static Sonido bowser;
+    public static Sonido yoshi;
+    public static Musica partida;
 
 }

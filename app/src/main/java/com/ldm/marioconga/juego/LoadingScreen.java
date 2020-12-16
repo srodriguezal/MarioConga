@@ -3,6 +3,7 @@ package com.ldm.marioconga.juego;
 import com.ldm.marioconga.Juego;
 import com.ldm.marioconga.Graficos;
 import com.ldm.marioconga.Pantalla;
+import com.ldm.marioconga.Sonido;
 
 public class LoadingScreen extends Pantalla {
     public LoadingScreen(Juego juego) {
@@ -80,19 +81,20 @@ public class LoadingScreen extends Pantalla {
         Assets.boo_rey1=g.newPixmap("boo_rey1.png",Graficos.PixmapFormat.ARGB4444);
         Assets.boo_rey2=g.newPixmap("boo_rey2.png",Graficos.PixmapFormat.ARGB4444);
 
-
-
-
-
-
-
-
-
         Assets.pulsar = juego.getAudio().nuevoSonido("pulsar.ogg");
         Assets.start = juego.getAudio().nuevoSonido("start.ogg");
         Assets.pausa = juego.getAudio().nuevoSonido("pausa.ogg");
         Assets.sonido_seta = juego.getAudio().nuevoSonido("sonido_seta.ogg");
         Assets.derrota = juego.getAudio().nuevoSonido("derrota.ogg");
+
+        Assets.mario = juego.getAudio().nuevoSonido("mario.ogg");
+        Assets.luigi = juego.getAudio().nuevoSonido("luigi.ogg");
+        Assets.peach = juego.getAudio().nuevoSonido("peach.ogg");
+        Assets.estela = juego.getAudio().nuevoSonido("estela.ogg");
+        Assets.bowser = juego.getAudio().nuevoSonido("bowser.ogg");
+        Assets.yoshi = juego.getAudio().nuevoSonido("yoshi.ogg");
+
+        Assets.partida = juego.getAudio().nuevaMusica("partida.ogg");
 
 
         Configuraciones.cargar(juego.getFileIO());
