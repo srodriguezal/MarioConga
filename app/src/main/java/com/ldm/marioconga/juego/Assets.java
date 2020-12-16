@@ -68,6 +68,7 @@ public class Assets {
     public static Pixmap bootler;
     public static Pixmap dark_boo_rey;
     public static Pixmap dark_boo;
+    public static Pixmap boo_rey1;
     public static Pixmap boo_rey2;
 
     public static Sonido start;

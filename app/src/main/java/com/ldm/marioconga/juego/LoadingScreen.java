@@ -77,6 +77,7 @@ public class LoadingScreen extends Pantalla {
         Assets.bala=g.newPixmap("bala.png",Graficos.PixmapFormat.ARGB4444);
         Assets.dark_boo_rey=g.newPixmap("dark_boo_rey.png",Graficos.PixmapFormat.ARGB4444);
         Assets.dark_boo=g.newPixmap("dark_boo.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.boo_rey1=g.newPixmap("boo_rey1.png",Graficos.PixmapFormat.ARGB4444);
         Assets.boo_rey2=g.newPixmap("boo_rey2.png",Graficos.PixmapFormat.ARGB4444);
 
 

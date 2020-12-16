@@ -160,7 +160,7 @@ public class PantallaJuego extends Pantalla {
 
 
         Pixmap headPixmap = null;
-       if(personaje.tipo== Personaje.TIPO_1) {//Mario
+       if(personaje.tipo== Personaje.TIPO_1) { // Mario
            Pixmap stainPixmap = null;
            if(premio.tipo== Premio.TIPO_1)
                stainPixmap = Assets.premio1;
@@ -181,11 +181,11 @@ public class PantallaJuego extends Pantalla {
            }
            Pixmap enmigoPixmap=null;
            if(enemigo.tipo==Enemigo.TIPO_1)
-               enmigoPixmap=Assets.goomba;
+               enmigoPixmap=Assets.boo_rey2;
            if (enemigo.tipo==Enemigo.TIPO_2)
                enmigoPixmap=Assets.bootler;
            if(enemigo.tipo==Enemigo.TIPO_3)
-               enmigoPixmap=Assets.boo;
+               enmigoPixmap=Assets.goomba;
            int xE= enemigo.x *32;
            int yE=enemigo.y*32;
            g.drawPixmap(enmigoPixmap,xE,yE);
@@ -202,7 +202,7 @@ public class PantallaJuego extends Pantalla {
            y = head.y * 32 + 16;
            g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
 
-       }else if(personaje.tipo== Personaje.TIPO_2) {//Luigi
+       }else if(personaje.tipo== Personaje.TIPO_2) { // Luigi
            Pixmap stainPixmap = null;
            if(premio.tipo== Premio.TIPO_1)
                stainPixmap = Assets.premio1;
@@ -226,7 +226,7 @@ public class PantallaJuego extends Pantalla {
             if (enemigo.tipo==Enemigo.TIPO_2)
                 enmigoPixmap=Assets.bootler;
             if(enemigo.tipo==Enemigo.TIPO_3)
-                enmigoPixmap=Assets.boo;
+                enmigoPixmap=Assets.boo_rey1;
             int xE= enemigo.x *32;
             int yE=enemigo.y*32;
             g.drawPixmap(enmigoPixmap,xE,yE);
@@ -243,7 +243,7 @@ public class PantallaJuego extends Pantalla {
            y = head.y * 32 + 16;
            g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
 
-        }else if(personaje.tipo== Personaje.TIPO_3) {//Peach
+        }else if(personaje.tipo== Personaje.TIPO_3) { // Peach
            Pixmap stainPixmap = null;
            if(premio.tipo== Premio.TIPO_1)
                stainPixmap = Assets.melocoton;
@@ -263,11 +263,11 @@ public class PantallaJuego extends Pantalla {
            }
            Pixmap enmigoPixmap=null;
            if(enemigo.tipo==Enemigo.TIPO_1)
-               enmigoPixmap=Assets.goomba;
+               enmigoPixmap=Assets.lady_bow;
            if (enemigo.tipo==Enemigo.TIPO_2)
-               enmigoPixmap=Assets.bootler;
+               enmigoPixmap=Assets.rey_goomba;
            if(enemigo.tipo==Enemigo.TIPO_3)
-               enmigoPixmap=Assets.boo;
+               enmigoPixmap=Assets.dark_boo_rey;
            int xE= enemigo.x *32;
            int yE=enemigo.y*32;
            g.drawPixmap(enmigoPixmap,xE,yE);
@@ -284,7 +284,7 @@ public class PantallaJuego extends Pantalla {
            y = head.y * 32 + 16;
            g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
 
-       } else if(personaje.tipo== Personaje.TIPO_4) {//Estela
+       } else if(personaje.tipo== Personaje.TIPO_4) { // Estela
            Pixmap stainPixmap = null;
            if(premio.tipo== Premio.TIPO_1)
                stainPixmap = Assets.corazon;
@@ -304,11 +304,11 @@ public class PantallaJuego extends Pantalla {
            }
            Pixmap enmigoPixmap=null;
            if(enemigo.tipo==Enemigo.TIPO_1)
-               enmigoPixmap=Assets.boo_rey2;
+               enmigoPixmap=Assets.rey_goomba;
            if (enemigo.tipo==Enemigo.TIPO_2)
                enmigoPixmap=Assets.lady_bow;
            if(enemigo.tipo==Enemigo.TIPO_3)
-               enmigoPixmap=Assets.dark_boo;
+               enmigoPixmap=Assets.dark_boo_rey;
            int xE= enemigo.x *32;
            int yE=enemigo.y*32;
            g.drawPixmap(enmigoPixmap,xE,yE);
@@ -325,7 +325,7 @@ public class PantallaJuego extends Pantalla {
            y = head.y * 32 + 16;
            g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
 
-       } else if(personaje.tipo== Personaje.TIPO_5) {//Bowser
+       } else if(personaje.tipo== Personaje.TIPO_5) { // Bowser
            Pixmap stainPixmap = null;
            if(premio.tipo== Premio.TIPO_1)
                stainPixmap = Assets.planta;
@@ -345,11 +345,11 @@ public class PantallaJuego extends Pantalla {
             }
             Pixmap enmigoPixmap=null;
             if(enemigo.tipo==Enemigo.TIPO_1)
-                enmigoPixmap=Assets.lady_bow;
+                enmigoPixmap=Assets.mario_izquierda;
             if (enemigo.tipo==Enemigo.TIPO_2)
-                enmigoPixmap=Assets.dark_boo_rey;
+                enmigoPixmap=Assets.luigi_derecha;
             if(enemigo.tipo==Enemigo.TIPO_3)
-                enmigoPixmap=Assets.rey_goomba;
+                enmigoPixmap=Assets.yoshi_izquierda;
             int xE= enemigo.x *32;
             int yE=enemigo.y*32;
             g.drawPixmap(enmigoPixmap,xE,yE);
@@ -366,7 +366,7 @@ public class PantallaJuego extends Pantalla {
            y = head.y * 32 + 16;
            g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
 
-        }else if(personaje.tipo== Personaje.TIPO_6) {//yoshi
+        }else if(personaje.tipo== Personaje.TIPO_6) { // Yoshi
            Pixmap stainPixmap = null;
            if(premio.tipo== Premio.TIPO_1)
                stainPixmap = Assets.huevo_rosa;
@@ -388,9 +388,9 @@ public class PantallaJuego extends Pantalla {
            if(enemigo.tipo==Enemigo.TIPO_1)
                enmigoPixmap=Assets.goomba;
            if (enemigo.tipo==Enemigo.TIPO_2)
-               enmigoPixmap=Assets.caparazon;
+               enmigoPixmap=Assets.boo;
            if(enemigo.tipo==Enemigo.TIPO_3)
-               enmigoPixmap=Assets.bala;
+               enmigoPixmap=Assets.dark_boo;
            int xE= enemigo.x *32;
            int yE=enemigo.y*32;
            g.drawPixmap(enmigoPixmap,xE,yE);
