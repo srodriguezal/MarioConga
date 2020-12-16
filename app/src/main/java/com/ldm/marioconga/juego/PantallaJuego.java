@@ -54,7 +54,7 @@ public class PantallaJuego extends Pantalla {
         for(int i = 0; i < len; i++) {
             Input.TouchEvent event = touchEvents.get(i);
             if(event.type == Input.TouchEvent.TOUCH_UP) {
-                if(event.x < 64 && event.y < 64) {
+                if((event.x > 185 && event.x <240) && event.y > 416) {
                     if(Configuraciones.sonidoHabilitado)
                         Assets.pausa.play(1);
                     estado = EstadoJuego.Pausado;
@@ -208,7 +208,7 @@ public class PantallaJuego extends Pantalla {
     private void drawRunningUI() {
         Graficos g = juego.getGraphics();
 
-        g.drawPixmap(Assets.botones, 0, 0, 64, 128, 64, 64);
+        g.drawPixmap(Assets.botones, 190, 416, 64, 128, 64, 64);
         g.drawLine(0, 416, 480, 416, Color.BLACK);
         g.drawPixmap(Assets.botones, 0, 416, 64, 64, 64, 64);
         g.drawPixmap(Assets.botones, 256, 416, 0, 64, 64, 64);
