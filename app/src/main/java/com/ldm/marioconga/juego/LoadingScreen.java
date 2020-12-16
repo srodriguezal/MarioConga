@@ -81,6 +81,14 @@ public class LoadingScreen extends Pantalla {
         Assets.boo_rey1=g.newPixmap("boo_rey1.png",Graficos.PixmapFormat.ARGB4444);
         Assets.boo_rey2=g.newPixmap("boo_rey2.png",Graficos.PixmapFormat.ARGB4444);
 
+
+        Assets.pantalla_estela=g.newPixmap("pantalla_estela.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.pantalla_peach=g.newPixmap("pantalla_peach.png",Graficos.PixmapFormat.ARGB4444);
+        /*Assets.boo_rey2=g.newPixmap("boo_rey2.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.boo_rey2=g.newPixmap("boo_rey2.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.boo_rey2=g.newPixmap("boo_rey2.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.boo_rey2=g.newPixmap("boo_rey2.png",Graficos.PixmapFormat.ARGB4444);*/
+
         Assets.pulsar = juego.getAudio().nuevoSonido("pulsar.ogg");
         Assets.start = juego.getAudio().nuevoSonido("start.ogg");
         Assets.pausa = juego.getAudio().nuevoSonido("pausa.ogg");

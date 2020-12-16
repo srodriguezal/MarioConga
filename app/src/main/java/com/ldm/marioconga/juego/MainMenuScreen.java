@@ -37,7 +37,7 @@ public class MainMenuScreen extends Pantalla {
                 if(inBounds(event, 64, 220 + 42, 192, 42) ) {
                     juego.setScreen(new PantallaMaximasPuntuaciones(juego));
                     if(Configuraciones.sonidoHabilitado)
-                        Assets.pulsar.play(1);
+                        Assets.start.play(1);
                     return;
                 }
                 if(inBounds(event, 64, 220 + 84, 192, 42) ) {

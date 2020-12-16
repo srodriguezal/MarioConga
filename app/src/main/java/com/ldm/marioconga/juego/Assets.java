@@ -72,6 +72,14 @@ public class Assets {
     public static Pixmap boo_rey1;
     public static Pixmap boo_rey2;
 
+    public static Pixmap pantalla_estela;
+    public static Pixmap pantalla_peach;
+    /*public static Pixmap boo_rey2;
+    public static Pixmap boo_rey2;
+    public static Pixmap boo_rey2;
+    public static Pixmap boo_rey2;*/
+
+
     public static Sonido start;
     public static Sonido pulsar;
     public static Sonido sonido_seta;

@@ -39,32 +39,32 @@ public class PantallaPersonaje extends Pantalla {
                 if(inBounds(event, 30, 115, 70, 80) ){ // Mario
                     if(Configuraciones.sonidoHabilitado)
                         Assets.mario.play(1);
-                    juego.setScreen(new PantallaJuego(juego, 1));
+                    juego.setScreen(new PantallaCarga(juego, 1));
 
                 } else if(inBounds(event, 205, 115, 70, 80) ){ // Luigi
                     if(Configuraciones.sonidoHabilitado)
                         Assets.luigi.play(1);
-                    juego.setScreen(new PantallaJuego(juego, 2));
+                    juego.setScreen(new PantallaCarga(juego, 2));
 
                 } else if(inBounds(event, 30, 220, 70, 70) ){ // Peach
                         if(Configuraciones.sonidoHabilitado)
                             Assets.peach.play(1);
-                        juego.setScreen(new PantallaJuego(juego, 3));
+                        juego.setScreen(new PantallaCarga(juego, 3));
 
                 } else if(inBounds(event, 205, 220, 70, 70) ){ // Estela
                         if(Configuraciones.sonidoHabilitado)
                             Assets.estela.play(1);
-                        juego.setScreen(new PantallaJuego(juego, 4));
+                        juego.setScreen(new PantallaCarga(juego, 4));
 
                 } else if(inBounds(event, 30, 325, 70, 60) ){ // Bowser
                     if(Configuraciones.sonidoHabilitado)
                         Assets.bowser.play(1);
-                    juego.setScreen(new PantallaJuego(juego, 5));
+                    juego.setScreen(new PantallaCarga(juego, 5));
 
                 } else if(inBounds(event, 205, 320, 70, 55) ){ // Yoshi
                 if(Configuraciones.sonidoHabilitado)
                     Assets.yoshi.play(1);
-                juego.setScreen(new PantallaJuego(juego, 6));
+                juego.setScreen(new PantallaCarga(juego, 6));
 
             }
                     return;
