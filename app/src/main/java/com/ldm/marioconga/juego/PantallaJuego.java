@@ -23,9 +23,9 @@ public class PantallaJuego extends Pantalla {
     int antiguaPuntuacion = 0;
     String puntuacion = "0";
 
-    public PantallaJuego(Juego juego) {
+    public PantallaJuego(Juego juego, int tipoPersonaje) {
         super(juego);
-        mundo = new Mundo();
+        mundo = new Mundo(tipoPersonaje);
     }
 
     @Override
@@ -148,54 +148,266 @@ public class PantallaJuego extends Pantalla {
 
     private void drawWorld(Mundo mundo) {
         Graficos g = juego.getGraphics();
-        Personaje jollyroger = mundo.personaje;
-        Seguidores head = jollyroger.partes.get(0);
+        Personaje personaje = mundo.personaje;
+        Seguidores head = personaje.partes.get(0);
         Premio premio = mundo.premio;
         Enemigo enemigo=mundo.enemigo;
 
 
-        Pixmap stainPixmap = null;
-        if(premio.tipo== Premio.TIPO_1)
-            stainPixmap = Assets.premio1;
-        if(premio.tipo == Premio.TIPO_2)
-            stainPixmap = Assets.premio2;
-        if(premio.tipo == Premio.TIPO_3)
-            stainPixmap = Assets.premio3;
-        int x = premio.x * 32;
-        int y = premio.y * 32;
-        g.drawPixmap(stainPixmap, x, y);
 
-        int len = jollyroger.partes.size();
-        for(int i = 1; i < len; i++) {
-            Seguidores part = jollyroger.partes.get(i);
-            x = part.x * 32;
-            y = part.y * 32;
-            g.drawPixmap(Assets.seguidores, x, y);
-        }
 
-        Pixmap enmigoPixmap=null;
-        if(enemigo.tipo==Enemigo.TIPO_1)
-            enmigoPixmap=Assets.goomba;
-        if (enemigo.tipo==Enemigo.TIPO_2)
-            enmigoPixmap=Assets.bootler;
-        if(enemigo.tipo==Enemigo.TIPO_3)
-            enmigoPixmap=Assets.boo;
-        int xE= enemigo.x *32;
-        int yE=enemigo.y*32;
-        g.drawPixmap(enmigoPixmap,xE,yE);
+
+
 
         Pixmap headPixmap = null;
-        if(jollyroger.direccion == Personaje.ARRIBA)
-            headPixmap = Assets.personaje_arriba;
-        if(jollyroger.direccion == Personaje.IZQUIERDA)
-            headPixmap = Assets.personaje_izquierda;
-        if(jollyroger.direccion == Personaje.ABAJO)
-            headPixmap = Assets.personaje_abajo;
-        if(jollyroger.direccion == Personaje.DERECHA)
-            headPixmap = Assets.personaje_derecha;
-        x = head.x * 32 + 16;
-        y = head.y * 32 + 16;
-        g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
+       if(personaje.tipo== Personaje.TIPO_1) {//Mario
+           Pixmap stainPixmap = null;
+           if(premio.tipo== Premio.TIPO_1)
+               stainPixmap = Assets.premio1;
+           if(premio.tipo == Premio.TIPO_2)
+               stainPixmap = Assets.premio2;
+           if(premio.tipo == Premio.TIPO_3)
+               stainPixmap = Assets.premio3;
+           int x = premio.x * 32;
+           int y = premio.y * 32;
+           g.drawPixmap(stainPixmap, x, y);
+
+           int len = personaje.partes.size();
+           for(int i = 1; i < len; i++) {
+               Seguidores part = personaje.partes.get(i);
+               x = part.x * 32;
+               y = part.y * 32;
+               g.drawPixmap(Assets.mario_bebe, x, y);
+           }
+           Pixmap enmigoPixmap=null;
+           if(enemigo.tipo==Enemigo.TIPO_1)
+               enmigoPixmap=Assets.goomba;
+           if (enemigo.tipo==Enemigo.TIPO_2)
+               enmigoPixmap=Assets.bootler;
+           if(enemigo.tipo==Enemigo.TIPO_3)
+               enmigoPixmap=Assets.boo;
+           int xE= enemigo.x *32;
+           int yE=enemigo.y*32;
+           g.drawPixmap(enmigoPixmap,xE,yE);
+           if (personaje.direccion == Personaje.ARRIBA)
+               headPixmap = Assets.mario_arriba;
+           if (personaje.direccion == Personaje.IZQUIERDA)
+               headPixmap = Assets.mario_izquierda;
+           if (personaje.direccion == Personaje.ABAJO)
+               headPixmap = Assets.mario_abajo;
+           if (personaje.direccion == Personaje.DERECHA)
+               headPixmap = Assets.mario_derecha;
+
+           x = head.x * 32 + 16;
+           y = head.y * 32 + 16;
+           g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
+
+       }else if(personaje.tipo== Personaje.TIPO_2) {//Luigi
+           Pixmap stainPixmap = null;
+           if(premio.tipo== Premio.TIPO_1)
+               stainPixmap = Assets.premio1;
+           if(premio.tipo == Premio.TIPO_2)
+               stainPixmap = Assets.premio2;
+           if(premio.tipo == Premio.TIPO_3)
+               stainPixmap = Assets.premio3;
+           int x = premio.x * 32;
+           int y = premio.y * 32;
+           g.drawPixmap(stainPixmap, x, y);
+            int len = personaje.partes.size();
+            for(int i = 1; i < len; i++) {
+                Seguidores part = personaje.partes.get(i);
+                x = part.x * 32;
+                y = part.y * 32;
+                g.drawPixmap(Assets.luigi_bebe, x, y);
+            }
+            Pixmap enmigoPixmap=null;
+            if(enemigo.tipo==Enemigo.TIPO_1)
+                enmigoPixmap=Assets.goomba;
+            if (enemigo.tipo==Enemigo.TIPO_2)
+                enmigoPixmap=Assets.bootler;
+            if(enemigo.tipo==Enemigo.TIPO_3)
+                enmigoPixmap=Assets.boo;
+            int xE= enemigo.x *32;
+            int yE=enemigo.y*32;
+            g.drawPixmap(enmigoPixmap,xE,yE);
+            if (personaje.direccion == Personaje.ARRIBA)
+                headPixmap = Assets.luigi_arriba;
+            if (personaje.direccion == Personaje.IZQUIERDA)
+                headPixmap = Assets.luigi_izquierda;
+            if (personaje.direccion == Personaje.ABAJO)
+                headPixmap = Assets.luigi_abajo;
+            if (personaje.direccion == Personaje.DERECHA)
+                headPixmap = Assets.luigi_derecha;
+
+           x = head.x * 32 + 16;
+           y = head.y * 32 + 16;
+           g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
+
+        }else if(personaje.tipo== Personaje.TIPO_3) {//Peach
+           Pixmap stainPixmap = null;
+           if(premio.tipo== Premio.TIPO_1)
+               stainPixmap = Assets.melocoton;
+           if(premio.tipo == Premio.TIPO_2)
+               stainPixmap = Assets.melocoton_azul;
+           if(premio.tipo == Premio.TIPO_3)
+               stainPixmap = Assets.melocoton_dorado;
+           int x = premio.x * 32;
+           int y = premio.y * 32;
+           g.drawPixmap(stainPixmap, x, y);
+           int len = personaje.partes.size();
+           for(int i = 1; i < len; i++) {
+               Seguidores part = personaje.partes.get(i);
+               x = part.x * 32;
+               y = part.y * 32;
+               g.drawPixmap(Assets.peach_bebe, x, y);
+           }
+           Pixmap enmigoPixmap=null;
+           if(enemigo.tipo==Enemigo.TIPO_1)
+               enmigoPixmap=Assets.goomba;
+           if (enemigo.tipo==Enemigo.TIPO_2)
+               enmigoPixmap=Assets.bootler;
+           if(enemigo.tipo==Enemigo.TIPO_3)
+               enmigoPixmap=Assets.boo;
+           int xE= enemigo.x *32;
+           int yE=enemigo.y*32;
+           g.drawPixmap(enmigoPixmap,xE,yE);
+           if (personaje.direccion == Personaje.ARRIBA)
+               headPixmap = Assets.peach_arriba;
+           if (personaje.direccion == Personaje.IZQUIERDA)
+               headPixmap = Assets.peach_izquierda;
+           if (personaje.direccion == Personaje.ABAJO)
+               headPixmap = Assets.peach_abajo;
+           if (personaje.direccion == Personaje.DERECHA)
+               headPixmap = Assets.peach_derecha;
+
+           x = head.x * 32 + 16;
+           y = head.y * 32 + 16;
+           g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
+
+       } else if(personaje.tipo== Personaje.TIPO_4) {//Estela
+           Pixmap stainPixmap = null;
+           if(premio.tipo== Premio.TIPO_1)
+               stainPixmap = Assets.corazon;
+           if(premio.tipo == Premio.TIPO_2)
+               stainPixmap = Assets.corazon_azul;
+           if(premio.tipo == Premio.TIPO_3)
+               stainPixmap = Assets.corazon_dorado;
+           int x = premio.x * 32;
+           int y = premio.y * 32;
+           g.drawPixmap(stainPixmap, x, y);
+           int len = personaje.partes.size();
+           for(int i = 1; i < len; i++) {
+               Seguidores part = personaje.partes.get(i);
+               x = part.x * 32;
+               y = part.y * 32;
+               g.drawPixmap(Assets.destello, x, y);
+           }
+           Pixmap enmigoPixmap=null;
+           if(enemigo.tipo==Enemigo.TIPO_1)
+               enmigoPixmap=Assets.boo_rey2;
+           if (enemigo.tipo==Enemigo.TIPO_2)
+               enmigoPixmap=Assets.lady_bow;
+           if(enemigo.tipo==Enemigo.TIPO_3)
+               enmigoPixmap=Assets.dark_boo;
+           int xE= enemigo.x *32;
+           int yE=enemigo.y*32;
+           g.drawPixmap(enmigoPixmap,xE,yE);
+           if (personaje.direccion == Personaje.ARRIBA)
+               headPixmap = Assets.estela_arriba;
+           if (personaje.direccion == Personaje.IZQUIERDA)
+               headPixmap = Assets.estela_izquierda;
+           if (personaje.direccion == Personaje.ABAJO)
+               headPixmap = Assets.estela_abajo;
+           if (personaje.direccion == Personaje.DERECHA)
+               headPixmap = Assets.estela_derecha;
+
+           x = head.x * 32 + 16;
+           y = head.y * 32 + 16;
+           g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
+
+       } else if(personaje.tipo== Personaje.TIPO_5) {//Bowser
+           Pixmap stainPixmap = null;
+           if(premio.tipo== Premio.TIPO_1)
+               stainPixmap = Assets.planta;
+           if(premio.tipo == Premio.TIPO_2)
+               stainPixmap = Assets.caparazon;
+           if(premio.tipo == Premio.TIPO_3)
+               stainPixmap = Assets.bala;
+           int x = premio.x * 32;
+           int y = premio.y * 32;
+           g.drawPixmap(stainPixmap, x, y);
+            int len = personaje.partes.size();
+            for(int i = 1; i < len; i++) {
+                Seguidores part = personaje.partes.get(i);
+                x = part.x * 32;
+                y = part.y * 32;
+                g.drawPixmap(Assets.bowser_jr, x, y);
+            }
+            Pixmap enmigoPixmap=null;
+            if(enemigo.tipo==Enemigo.TIPO_1)
+                enmigoPixmap=Assets.lady_bow;
+            if (enemigo.tipo==Enemigo.TIPO_2)
+                enmigoPixmap=Assets.dark_boo_rey;
+            if(enemigo.tipo==Enemigo.TIPO_3)
+                enmigoPixmap=Assets.rey_goomba;
+            int xE= enemigo.x *32;
+            int yE=enemigo.y*32;
+            g.drawPixmap(enmigoPixmap,xE,yE);
+            if (personaje.direccion == Personaje.ARRIBA)
+                headPixmap = Assets.bowser_arriba;
+            if (personaje.direccion == Personaje.IZQUIERDA)
+                headPixmap = Assets.bowser_izquierda;
+            if (personaje.direccion == Personaje.ABAJO)
+                headPixmap = Assets.bowser_abajo;
+            if (personaje.direccion == Personaje.DERECHA)
+                headPixmap = Assets.bowser_derecha;
+
+           x = head.x * 32 + 16;
+           y = head.y * 32 + 16;
+           g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
+
+        }else if(personaje.tipo== Personaje.TIPO_6) {//yoshi
+           Pixmap stainPixmap = null;
+           if(premio.tipo== Premio.TIPO_1)
+               stainPixmap = Assets.huevo_rosa;
+           if(premio.tipo == Premio.TIPO_2)
+               stainPixmap = Assets.huevo_azul;
+           if(premio.tipo == Premio.TIPO_3)
+               stainPixmap = Assets.huevo_amarillo;
+           int x = premio.x * 32;
+           int y = premio.y * 32;
+           g.drawPixmap(stainPixmap, x, y);
+           int len = personaje.partes.size();
+           for(int i = 1; i < len; i++) {
+               Seguidores part = personaje.partes.get(i);
+               x = part.x * 32;
+               y = part.y * 32;
+               g.drawPixmap(Assets.huevos, x, y);
+           }
+           Pixmap enmigoPixmap=null;
+           if(enemigo.tipo==Enemigo.TIPO_1)
+               enmigoPixmap=Assets.goomba;
+           if (enemigo.tipo==Enemigo.TIPO_2)
+               enmigoPixmap=Assets.caparazon;
+           if(enemigo.tipo==Enemigo.TIPO_3)
+               enmigoPixmap=Assets.bala;
+           int xE= enemigo.x *32;
+           int yE=enemigo.y*32;
+           g.drawPixmap(enmigoPixmap,xE,yE);
+           if (personaje.direccion == Personaje.ARRIBA)
+               headPixmap = Assets.yoshi_arriba;
+           if (personaje.direccion == Personaje.IZQUIERDA)
+               headPixmap = Assets.yoshi_izquierda;
+           if (personaje.direccion == Personaje.ABAJO)
+               headPixmap = Assets.yoshi_abajo;
+           if (personaje.direccion == Personaje.DERECHA)
+               headPixmap = Assets.yoshi_derecha;
+
+           x = head.x * 32 + 16;
+           y = head.y * 32 + 16;
+           g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y - headPixmap.getHeight() / 2);
+       }
+
     }
 
     private void drawReadyUI() {
