@@ -35,7 +35,7 @@ public class PantallaCarga extends Pantalla {
                 if (event.x < 64 && event.y > 416) {
                     if (Configuraciones.sonidoHabilitado)
                         Assets.pulsar.play(1);
-                    juego.setScreen(new MainMenuScreen(juego));
+                    juego.setScreen(new PantallaPersonaje(juego));
                     return;
                 }
             }
