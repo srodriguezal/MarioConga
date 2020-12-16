@@ -29,29 +29,26 @@ public class LoadingScreen extends Pantalla {
         Assets.mario_abajo = g.newPixmap("mario_abajo.png", Graficos.PixmapFormat.ARGB4444);
         Assets.mario_derecha = g.newPixmap("mario_derecha.png", Graficos.PixmapFormat.ARGB4444);
         Assets.mario_bebe = g.newPixmap("bebe_mario.png", Graficos.PixmapFormat.ARGB4444);
-        /*Assets.mario_arriba = g.newPixmap("luigi_arriba.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.mario_izquierda = g.newPixmap("luigi_izquierda.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.mario_abajo = g.newPixmap("luigi_abajo.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.mario_derecha = g.newPixmap("luigi_derecha.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.luigi_bebe = g.newPixmap("bebe_luigi.png", Graficos.PixmapFormat.ARGB4444);*/
-        /*Assets.mario_arriba = g.newPixmap("peach_arriba.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.mario_izquierda = g.newPixmap("peach_izquierda.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.mario_abajo = g.newPixmap("peach_abajo.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.mario_derecha = g.newPixmap("peach_derecha.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.peach_bebe = g.newPixmap("bebe_peach.png", Graficos.PixmapFormat.ARGB4444);*/
-
+        Assets.luigi_arriba = g.newPixmap("luigi_arriba.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.luigi_izquierda = g.newPixmap("luigi_izquierda.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.luigi_abajo = g.newPixmap("luigi_abajo.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.luigi_derecha = g.newPixmap("luigi_derecha.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.luigi_bebe = g.newPixmap("bebe_luigi.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.peach_arriba = g.newPixmap("peach_arriba.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.peach_izquierda = g.newPixmap("peach_izquierda.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.peach_abajo = g.newPixmap("peach_abajo.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.peach_derecha = g.newPixmap("peach_derecha.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.peach_bebe = g.newPixmap("bebe_peach.png", Graficos.PixmapFormat.ARGB4444);
         Assets.estela_arriba = g.newPixmap("estela_arriba.png", Graficos.PixmapFormat.ARGB4444);
         Assets.estela_izquierda = g.newPixmap("estela_izquierda.png", Graficos.PixmapFormat.ARGB4444);
         Assets.estela_abajo = g.newPixmap("estela_abajo.png", Graficos.PixmapFormat.ARGB4444);
         Assets.estela_derecha = g.newPixmap("estela_derecha.png", Graficos.PixmapFormat.ARGB4444);
         Assets.destello = g.newPixmap("destello.png", Graficos.PixmapFormat.ARGB4444);
-
-        /*Assets.mario_arriba = g.newPixmap("mario_arriba.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.mario_izquierda = g.newPixmap("mario_izquierda.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.mario_abajo = g.newPixmap("mario_abajo.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.mario_derecha = g.newPixmap("mario_derecha.png", Graficos.PixmapFormat.ARGB4444);
-        Assets.mario_bebe = g.newPixmap("bebe_mario.png", Graficos.PixmapFormat.ARGB4444);*/
-
+        Assets.bowser_arriba = g.newPixmap("bowser_arriba.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.bowser_izquierda = g.newPixmap("bowser_izquierda.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.bowser_abajo = g.newPixmap("bowser_abajo.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.bowser_derecha = g.newPixmap("bowser_derecha.png", Graficos.PixmapFormat.ARGB4444);
+        Assets.bowser_jr = g.newPixmap("bowser_jr.png", Graficos.PixmapFormat.ARGB4444);
         Assets.yoshi_arriba = g.newPixmap("yoshi_arriba.png", Graficos.PixmapFormat.ARGB4444);
         Assets.yoshi_izquierda = g.newPixmap("yoshi_izquierda.png", Graficos.PixmapFormat.ARGB4444);
         Assets.yoshi_abajo = g.newPixmap("yoshi_abajo.png", Graficos.PixmapFormat.ARGB4444);
@@ -64,6 +61,31 @@ public class LoadingScreen extends Pantalla {
         Assets.boo=g.newPixmap("boo.png",Graficos.PixmapFormat.ARGB4444);
         Assets.goomba=g.newPixmap("goomba.png",Graficos.PixmapFormat.ARGB4444);
         Assets.bootler=g.newPixmap("bootler.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.melocoton=g.newPixmap("melocoton.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.melocoton_azul=g.newPixmap("melocoton_azul.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.melocoton_dorado=g.newPixmap("melocoton_dorado.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.caparazon=g.newPixmap("caparazon.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.planta=g.newPixmap("planta.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.corazon=g.newPixmap("corazon.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.corazon_azul=g.newPixmap("corazon_azul.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.corazon_dorado=g.newPixmap("corazon_dorado.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.huevo_amarillo=g.newPixmap("huevo_amarillo.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.huevo_azul=g.newPixmap("huevo_azul.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.huevo_rosa=g.newPixmap("huevo_rosa.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.rey_goomba=g.newPixmap("rey_goomba.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.lady_bow=g.newPixmap("lady_bow.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.bala=g.newPixmap("bala.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.dark_boo_rey=g.newPixmap("dark_boo_rey.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.dark_boo=g.newPixmap("dark_boo.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.boo_rey2=g.newPixmap("boo_rey2.png",Graficos.PixmapFormat.ARGB4444);
+
+
+
+
+
+
+
+
 
         Assets.pulsar = juego.getAudio().nuevoSonido("pulsar.ogg");
         Assets.start = juego.getAudio().nuevoSonido("start.ogg");
