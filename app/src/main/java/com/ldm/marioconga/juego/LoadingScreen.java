@@ -81,13 +81,12 @@ public class LoadingScreen extends Pantalla {
         Assets.boo_rey1=g.newPixmap("boo_rey1.png",Graficos.PixmapFormat.ARGB4444);
         Assets.boo_rey2=g.newPixmap("boo_rey2.png",Graficos.PixmapFormat.ARGB4444);
 
-
-        Assets.pantalla_estela=g.newPixmap("pantalla_estela.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.pantalla_mario=g.newPixmap("pantalla_mario.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.pantalla_luigi=g.newPixmap("pantalla_luigi.png",Graficos.PixmapFormat.ARGB4444);
         Assets.pantalla_peach=g.newPixmap("pantalla_peach.png",Graficos.PixmapFormat.ARGB4444);
-        /*Assets.boo_rey2=g.newPixmap("boo_rey2.png",Graficos.PixmapFormat.ARGB4444);
-        Assets.boo_rey2=g.newPixmap("boo_rey2.png",Graficos.PixmapFormat.ARGB4444);
-        Assets.boo_rey2=g.newPixmap("boo_rey2.png",Graficos.PixmapFormat.ARGB4444);
-        Assets.boo_rey2=g.newPixmap("boo_rey2.png",Graficos.PixmapFormat.ARGB4444);*/
+        Assets.pantalla_estela=g.newPixmap("pantalla_estela.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.pantalla_bowser=g.newPixmap("pantalla_bowser.png",Graficos.PixmapFormat.ARGB4444);
+        Assets.pantalla_yoshi=g.newPixmap("pantalla_yoshi.png",Graficos.PixmapFormat.ARGB4444);
 
         Assets.pulsar = juego.getAudio().nuevoSonido("pulsar.ogg");
         Assets.start = juego.getAudio().nuevoSonido("start.ogg");

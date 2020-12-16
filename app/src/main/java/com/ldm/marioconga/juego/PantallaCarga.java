@@ -49,8 +49,10 @@ public class PantallaCarga extends Pantalla {
         g.drawPixmap(Assets.fondo, 0, 0);
 
         if(tipoPersonaje== 1){ // Mario
+            g.drawPixmap(Assets.pantalla_mario, 0, 0);
 
         } else if(tipoPersonaje== 2){ // Luigi
+            g.drawPixmap(Assets.pantalla_luigi, 0, 0);
 
         } else if(tipoPersonaje== 3){ // Peach
             g.drawPixmap(Assets.pantalla_peach, 0, 0);
@@ -59,11 +61,12 @@ public class PantallaCarga extends Pantalla {
             g.drawPixmap(Assets.pantalla_estela, 0, 0);
 
         } else if(tipoPersonaje== 5){ // Bowser
+            g.drawPixmap(Assets.pantalla_bowser, 0, 0);
 
         } else if(tipoPersonaje== 6){ // Yoshi
+            g.drawPixmap(Assets.pantalla_yoshi, 0, 0);
 
         }
-
         g.drawPixmap(Assets.botones, 0, 416, 64, 64, 64, 64);
         g.drawPixmap(Assets.botones, 256, 416, 0, 64, 64, 64);
 
