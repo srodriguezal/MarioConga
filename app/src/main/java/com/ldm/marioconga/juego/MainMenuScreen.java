@@ -56,7 +56,7 @@ public class MainMenuScreen extends Pantalla {
                     juego.setScreen(new PantallaAyuda(juego));
                     if(Configuraciones.sonidoHabilitado) {
                         Assets.intro.stop();
-                        Assets.start.play(1);
+                        Assets.pulsar.play(1);
                     }
                     return;
                 }
