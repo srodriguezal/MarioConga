@@ -38,33 +38,33 @@ public class PantallaPersonaje extends Pantalla {
 
                 if(inBounds(event, 30, 115, 70, 80) ){ // Mario
                     if(Configuraciones.sonidoHabilitado)
-                        Assets.start.play(1);
-                    juego.setScreen(new PantallaJuego(juego, 1));
+                        Assets.mario.play(1);
+                    juego.setScreen(new PantallaCarga(juego, 1));
 
                 } else if(inBounds(event, 205, 115, 70, 80) ){ // Luigi
                     if(Configuraciones.sonidoHabilitado)
-                        Assets.start.play(1);
-                    juego.setScreen(new PantallaJuego(juego, 2));
+                        Assets.luigi.play(1);
+                    juego.setScreen(new PantallaCarga(juego, 2));
 
                 } else if(inBounds(event, 30, 220, 70, 70) ){ // Peach
                         if(Configuraciones.sonidoHabilitado)
-                            Assets.start.play(1);
-                        juego.setScreen(new PantallaJuego(juego, 3));
+                            Assets.peach.play(1);
+                        juego.setScreen(new PantallaCarga(juego, 3));
 
                 } else if(inBounds(event, 205, 220, 70, 70) ){ // Estela
                         if(Configuraciones.sonidoHabilitado)
-                            Assets.start.play(1);
-                        juego.setScreen(new PantallaJuego(juego, 4));
+                            Assets.estela.play(1);
+                        juego.setScreen(new PantallaCarga(juego, 4));
 
                 } else if(inBounds(event, 30, 325, 70, 60) ){ // Bowser
                     if(Configuraciones.sonidoHabilitado)
-                        Assets.start.play(1);
-                    juego.setScreen(new PantallaJuego(juego, 5));
+                        Assets.bowser.play(1);
+                    juego.setScreen(new PantallaCarga(juego, 5));
 
                 } else if(inBounds(event, 205, 320, 70, 55) ){ // Yoshi
                 if(Configuraciones.sonidoHabilitado)
-                    Assets.start.play(1);
-                juego.setScreen(new PantallaJuego(juego, 6));
+                    Assets.yoshi.play(1);
+                juego.setScreen(new PantallaCarga(juego, 6));
 
             }
                     return;

@@ -1,5 +1,6 @@
 package com.ldm.marioconga.juego;
 
+import com.ldm.marioconga.Musica;
 import com.ldm.marioconga.Pixmap;
 import com.ldm.marioconga.Sonido;
 
@@ -71,10 +72,27 @@ public class Assets {
     public static Pixmap boo_rey1;
     public static Pixmap boo_rey2;
 
+    public static Pixmap pantalla_mario;
+    public static Pixmap pantalla_luigi;
+    public static Pixmap pantalla_peach;
+    public static Pixmap pantalla_estela;
+    public static Pixmap pantalla_bowser;
+    public static Pixmap pantalla_yoshi;
+
+
     public static Sonido start;
     public static Sonido pulsar;
     public static Sonido sonido_seta;
     public static Sonido derrota;
     public static Sonido pausa;
+    public static Sonido mario;
+    public static Sonido luigi;
+    public static Sonido peach;
+    public static Sonido estela;
+    public static Sonido bowser;
+    public static Sonido yoshi;
+
+    public static Musica partida;
+    public static Musica intro;
 
 }

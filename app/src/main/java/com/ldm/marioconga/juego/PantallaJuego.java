@@ -133,14 +133,28 @@ public class PantallaJuego extends Pantalla {
         drawWorld(mundo);
         if(estado == EstadoJuego.Preparado)
             drawReadyUI();
-        if(estado == EstadoJuego.Ejecutandose)
+
+        if(estado == EstadoJuego.Ejecutandose){
+            if(Configuraciones.sonidoHabilitado){
+                Assets.partida.play();
+                Assets.partida.setLooping(true);
+
+            }
+
             drawRunningUI();
+        }
+
         if(estado == EstadoJuego.Pausado){
+            if(Configuraciones.sonidoHabilitado)
+                Assets.partida.pause();
             drawPausedUI();
         }
 
-        if(estado == EstadoJuego.FinJuego)
+        if(estado == EstadoJuego.FinJuego) {
+            if(Configuraciones.sonidoHabilitado)
+                Assets.partida.stop();
             drawGameOverUI();
+        }
 
 
         drawText(g, puntuacion, g.getWidth() / 2 - puntuacion.length()*20 / 2, g.getHeight() - 42);
